@@ -1,0 +1,189 @@
+/*  
+----------------------------------------------------------------------------------------------------
+8.0 SITE WIDE PODS
+---------------------------------------------------------------------------------------------------- 
+*/
+
+.swp {
+    margin-bottom: $base-spacing;
+}
+
+.swp .item {
+    position: relative;
+    margin-bottom: $base-spacing;
+}
+
+.swp .item:last-child {
+    margin-bottom: 0;
+}
+
+.swp .item .heading a {
+    text-decoration: none;
+}
+
+.swp .item .heading i {
+    font-size: 15px;
+    display: none;
+}
+
+.swp .item.form-pod .heading,
+.swp .item .heading.main,
+.swp>.item>.heading {
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.swp .item.form-pod .heading::after,
+.swp .item .heading.main::after,
+.swp>.item>.heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 15px;
+    height: $base-border-width;
+    background-color: rgba($c6, 1);
+}
+
+.swp .item.form-pod .heading a,
+.swp .item .heading.main a,
+.swp>.item>.heading a {
+    display: block;
+    font-weight: 700;
+    color: rgba($c3, 1);
+}
+
+html.no-touch .swp>.item>.heading a:hover {
+    color: ligthen($c3, 15%);
+}
+
+.swp .item .link {
+    margin-bottom: 0;
+}
+
+
+/*  
+----------------------------------------------------------------------------------------------------
+8.1 BLOCKQUOTE POD
+---------------------------------------------------------------------------------------------------- 
+*/
+
+.swp .item.blockquote-pod {}
+
+.swp blockquote {
+    margin: 0;
+    padding-bottom: 0;
+}
+
+.swp blockquote p {
+    font-size: 16px;
+}
+
+@media (min-width:992px) {
+    .swp blockquote p {
+        font-size: 20px;
+    }
+}
+
+
+/*  
+----------------------------------------------------------------------------------------------------
+8.2 CODEPOD
+---------------------------------------------------------------------------------------------------- 
+*/
+
+.swp .item.code-pod {}
+
+
+/*  
+----------------------------------------------------------------------------------------------------
+8.3 GENERAL POD
+---------------------------------------------------------------------------------------------------- 
+*/
+
+.swp .item.general-pod {}
+
+
+/* 
+----------------------------------------------------------------------------------------------------
+8.4 IMAGE POD
+---------------------------------------------------------------------------------------------------- 
+*/
+
+.swp .item.image-pod {}
+
+
+/*  
+----------------------------------------------------------------------------------------------------
+8.5 LISTING POD
+---------------------------------------------------------------------------------------------------- 
+*/
+
+.swp .item.listing-pod {}
+
+.swp .item.listing-pod .inner>.heading {
+    margin-bottom: $base-spacing;
+}
+
+.swp .item.listing-pod .link {
+    margin: $base-half-spacing 0 0;
+}
+
+.swp .listing {
+    margin: 0;
+    padding: 0;
+}
+
+.swp .listing .item {
+    margin: 0;
+    padding: 0;
+}
+
+.swp .listing .item::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: $base-border-width;
+    margin: 10px 0 $base-half-spacing;
+    background-color: rgba($c6, 1);
+}
+
+.swp .listing .item:last-of-type::after {
+    background: none;
+}
+
+.swp .listing .item .heading {
+    font-size: 16px;
+}
+
+.swp .listing .item .meta {
+    margin: 0;
+    padding: 10px 0 0;
+    font-size: 12px;
+    border: 0 none;
+}
+
+
+/*  
+----------------------------------------------------------------------------------------------------
+8.6 FORM POD
+---------------------------------------------------------------------------------------------------- 
+*/
+
+.swp .item.form-pod {}
+
+@media (min-width:992px) {}
+
+
+/*  
+----------------------------------------------------------------------------------------------------
+8.7 VIDEO POD
+---------------------------------------------------------------------------------------------------- 
+*/
+
+.swp .item.video-pod {}
