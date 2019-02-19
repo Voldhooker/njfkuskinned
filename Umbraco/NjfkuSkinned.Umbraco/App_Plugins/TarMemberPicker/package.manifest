@@ -5,7 +5,8 @@
 			name: "TarSoft Member picker",
 			isParameterEditor: true,
 			editor: {
-				view: "~/App_Plugins/TarMemberPicker/tarmemberpicker.html"
+				view: "~/App_Plugins/TarMemberPicker/tarmemberpicker.html",
+				valueType: "JSON"
 			},
 			prevalues: 
 			{

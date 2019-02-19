@@ -6,15 +6,17 @@
         }
         customMemberResource.getAll(res).then(function (response) {
             $scope.members = response;
-            $scope.selectedMembers = [];
+            console.log($scope.model.value);
+            if ($scope.model.value != null)
+                $scope.selectedMembers = $scope.model.value;
             $scope.selectedDropdown = null;
         });
 
         $scope.add = function () {
             console.log('Selected dropdown is: |' + $scope.selectedDropdown+'|');
             if ($scope.selectedDropdown !== null && !$scope.selectedMembers.filter(e => e.Id === $scope.selectedDropdown.Id).length > 0) {
-            
                 $scope.selectedMembers.push($scope.selectedDropdown);
+                $scope.model.value = $scope.selectedMembers;
             }
         };
         $scope.remove = function (item) {
@@ -22,8 +24,17 @@
             if ($scope.selectedMembers.filter(e => e.Id === item.Id).length > 0) {
                 var index = $scope.selectedMembers.indexOf(item);
                 $scope.selectedMembers.splice(index, 1); 
+                $scope.model.value = $scope.selectedMembers;
             }
         };
+
+        //var save = $scope.$on("formSubmitting", function (ev, args) {
+        //    console.log('Saving');
+        //    $scope.model.value = $scope.selectedMembers;
+        //    alert('Saving');
+        //});
+
+
         //$scope.selectedMembers = [];
         //$scope.update = function (id) {
         //    id = event.target.id;
