@@ -1,0 +1,28 @@
+﻿<!--<div class="umb-editor umb-datepicker" ng-controller="TarSoft.MemberPicker">
+    <div class="input"id="memberpicker{{model.alias}}">
+        <textarea ng-model="model.value"></textarea>
+    </div>
+</div>-->
+<!--<div ng-controller="TarSoft.MemberPicker">
+    <select ng-model="selectedMember" ng-Change="onChange($event.target.value)"  class="umb-editor umb-dropdown">
+        <option ng-repeat="x in members" value="{{x.Id}}">{{x.Name}}</option>
+    </select>
+    <span ng-model="model.value"></span><span ng-bind="model.value"></span>
+</div>-->
+<div ng-controller="TarSoft.MemberPicker">
+    <select name="dropDownList"
+            class="umb-editor umb-dropdown"
+            ng-model="selectedDropdown"
+            ng-options="item.Name for item in members track by item.Id">
+
+        <option></option>
+    </select>
+    <br />
+    <button type="button" ng-click="add()">Add selected</button>
+    <br />
+    <ul ng-repeat="item in selectedMembers">
+        <li>{{item.Id}} {{item.Name}} <a class="btn" ng-click="remove(item)">Remove</a></li>
+    </ul>
+    {{model.value.Id}}
+</div>
+

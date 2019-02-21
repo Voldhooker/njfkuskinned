@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5360b6dbad5c75bb")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "1aad31a559888ef7")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -13964,6 +13964,41 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
+	/// <summary>CalendarFolder</summary>
+	[PublishedContentModel("calendarFolder")]
+	public partial class CalendarFolder : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "calendarFolder";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public CalendarFolder(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<CalendarFolder, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// tarsoftpicker
+		///</summary>
+		[ImplementPropertyType("tarsoftpicker")]
+		public object Tarsoftpicker
+		{
+			get { return this.GetPropertyValue("tarsoftpicker"); }
+		}
+	}
+
 	/// <summary>Folder</summary>
 	[PublishedContentModel("Folder")]
 	public partial class Folder : PublishedContentModel
@@ -14146,6 +14181,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Member, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Google calendar id
+		///</summary>
+		[ImplementPropertyType("googleCalendarId")]
+		public string GoogleCalendarId
+		{
+			get { return this.GetPropertyValue<string>("googleCalendarId"); }
 		}
 
 		///<summary>

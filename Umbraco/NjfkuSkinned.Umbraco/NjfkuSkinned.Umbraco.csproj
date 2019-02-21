@@ -80,6 +80,9 @@
     <Reference Include="ImageProcessor.Web, Version=4.8.7.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ImageProcessor.Web.4.8.7\lib\net45\ImageProcessor.Web.dll</HintPath>
     </Reference>
+    <Reference Include="InfoCaster.Umbraco.UrlTracker, Version=3.15.6603.27377, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UrlTracker.3.15.0\lib\net45\InfoCaster.Umbraco.UrlTracker.dll</HintPath>
+    </Reference>
     <Reference Include="interfaces, Version=1.0.6942.23070, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Core.7.13.0\lib\net45\interfaces.dll</HintPath>
     </Reference>
@@ -255,6 +258,52 @@
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.htm" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
+    <Content Include="App_Plugins\TarMemberPicker\member.resource.js" />
+    <Content Include="App_Plugins\TarMemberPicker\TarMemberPicker.controller.js" />
+    <Content Include="App_Plugins\TarMemberPicker\tarmemberpicker.html" />
+    <Content Include="App_Plugins\UmbracoForms\Backoffice\PropertyEditors\formpicker.html" />
+    <Content Include="App_Plugins\USN.BackgroundOptions\css\style.css" />
+    <Content Include="App_Plugins\USN.BackgroundOptions\js\usn.backgroundoptions.js" />
+    <Content Include="App_Plugins\USN.BackgroundOptions\views\usn.backgroundoptions.html" />
+    <Content Include="App_Plugins\USN.Dashboard\avatar.jpg" />
+    <Content Include="App_Plugins\USN.Dashboard\css\style.css" />
+    <Content Include="App_Plugins\USN.Dashboard\js\dashboard.controller.js" />
+    <Content Include="App_Plugins\USN.Dashboard\views\dashboard.html" />
+    <Content Include="App_Plugins\USN.Heading\css\style.css" />
+    <Content Include="App_Plugins\USN.Heading\js\usn.heading.js" />
+    <Content Include="App_Plugins\USN.Heading\views\usn.heading.html" />
+    <Content Include="App_Plugins\USN.Label\css\usn.label.css" />
+    <Content Include="App_Plugins\USN.Label\js\usn.label.js" />
+    <Content Include="App_Plugins\USN.Label\views\usn.label.html" />
+    <Content Include="App_Plugins\USN.LicenseDashboard\css\style.css" />
+    <Content Include="App_Plugins\USN.LicenseDashboard\js\dashboard.controller.js" />
+    <Content Include="App_Plugins\USN.LicenseDashboard\js\file.upload.api.service.js" />
+    <Content Include="App_Plugins\USN.LicenseDashboard\js\ng-file-upload-all.min.js" />
+    <Content Include="App_Plugins\USN.LicenseDashboard\views\dashboard.html" />
+    <Content Include="App_Plugins\USN.MultiNodeTreePicker\js\contentpicker.controller.js" />
+    <Content Include="App_Plugins\USN.MultiNodeTreePicker\js\treesource.controller.js" />
+    <Content Include="App_Plugins\USN.MultiNodeTreePicker\PreValues\treesource.html" />
+    <Content Include="App_Plugins\USN.MultiNodeTreePicker\PropertyEditor\editor.html" />
+    <Content Include="App_Plugins\USN.Options\css\style.css" />
+    <Content Include="App_Plugins\USN.Options\js\usn.options.js" />
+    <Content Include="App_Plugins\USN.Options\Prevalues\prevalues.html" />
+    <Content Include="App_Plugins\USN.Options\Prevalues\prevaluescontroller.js" />
+    <Content Include="App_Plugins\USN.Options\PropertyEditor\editor.html" />
+    <Content Include="App_Plugins\USN.ReadOnly\css\usn.readonly.css" />
+    <Content Include="App_Plugins\USN.ReadOnly\js\usn.readonly.js" />
+    <Content Include="App_Plugins\USN.ReadOnly\views\usn.readonly.html" />
+    <Content Include="App_Plugins\USN.ShowHideTabs\Prevalues\prevalues.css" />
+    <Content Include="App_Plugins\USN.ShowHideTabs\Prevalues\prevalues.html" />
+    <Content Include="App_Plugins\USN.ShowHideTabs\Prevalues\prevaluescontroller.js" />
+    <Content Include="App_Plugins\USN.ShowHideTabs\PropertyEditors\common.js" />
+    <Content Include="App_Plugins\USN.ShowHideTabs\PropertyEditors\Options\options.html" />
+    <Content Include="App_Plugins\USN.ShowHideTabs\PropertyEditors\Options\optionscontroller.js" />
+    <Content Include="App_Plugins\USN.ShowHideTabs\style.css" />
+    <Content Include="App_Plugins\USN.TrueFalse\css\usn.truefalse.css" />
+    <Content Include="App_Plugins\USN.TrueFalse\js\usn.truefalse.js" />
+    <Content Include="App_Plugins\USN.TrueFalse\views\usn.truefalse.html" />
+    <Content Include="App_Plugins\USN.TwitterUsername\css\style.css" />
+    <Content Include="App_Plugins\USN.TwitterUsername\PropertyEditor\editor.html" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -300,6 +349,10 @@
     <Content Include="App_Code\USNModels\USNNewsletterFormViewModel.cs" />
     <Content Include="App_Code\USNTemplate\USNTemplateStyleSettings.cs" />
     <Content Include="App_Code\USNTemplate\USNViewTemplateHelper.cs" />
+    <Content Include="App_Code\NjfkControllers\CustomMemberApiController.cs" />
+    <Content Include="App_Code\NjfkModels\MemberPickerModel.cs" />
+    <Content Include="App_Code\Converters\MemberPickerConverter.cs" />
+    <Content Include="App_Code\NjfkModels\MemberPickerModelList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -329,6 +382,21 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="App_Plugins\TarMemberPicker\package.manifest" />
+    <Content Include="App_Plugins\UmbracoForms\package.manifest" />
+    <Content Include="App_Plugins\USN.BackgroundOptions\package.manifest" />
+    <Content Include="App_Plugins\USN.Dashboard\package.manifest" />
+    <Content Include="App_Plugins\USN.Grid.Code\editor.cshtml" />
+    <Content Include="App_Plugins\USN.Grid.Code\package.manifest" />
+    <Content Include="App_Plugins\USN.Heading\package.manifest" />
+    <Content Include="App_Plugins\USN.Label\package.manifest" />
+    <Content Include="App_Plugins\USN.LicenseDashboard\package.manifest" />
+    <Content Include="App_Plugins\USN.MultiNodeTreePicker\package.manifest" />
+    <Content Include="App_Plugins\USN.Options\package.manifest" />
+    <Content Include="App_Plugins\USN.ReadOnly\package.manifest" />
+    <Content Include="App_Plugins\USN.ShowHideTabs\package.manifest" />
+    <Content Include="App_Plugins\USN.TrueFalse\package.manifest" />
+    <Content Include="App_Plugins\USN.TwitterUsername\package.manifest" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />

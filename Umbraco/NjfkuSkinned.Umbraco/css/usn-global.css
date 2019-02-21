@@ -303,7 +303,7 @@ BOOTSTRAP BREAKPOINTS
   text-align: center;
   line-height: 52px !important;
   color: white;
-  background-color: #8bc435;
+  background-color: #a53693;
   transform: translateY(-50%);
   transition: background-color 0.3s ease-in-out 0s;
 }
@@ -319,7 +319,7 @@ BOOTSTRAP BREAKPOINTS
 html.no-touch .ekko-lightbox-nav-overlay a:hover::before {
   text-decoration: none;
   color: white;
-  background-color: #7db030;
+  background-color: #90308a;
 }
 
 .ekko-lightbox .modal-footer {
@@ -4209,54 +4209,54 @@ TABLE OF CONTENTS
 -------------------------------------------------- 
 */
 .c1-bg {
-  background-color: #8bc435;
-  background: #8bc435;
-  background: -moz-linear-gradient(45deg, #a6e11a 0%, #8bc435 100%);
-  background: -webkit-linear-gradient(45deg, #a6e11a 0%, #8bc435 100%);
-  background: linear-gradient(45deg, #a6e11a 0%, #8bc435 100%);
+  background-color: #a53693;
+  background: #a53693;
+  background: -moz-linear-gradient(45deg, #a6e11a 0%, #a53693 100%);
+  background: -webkit-linear-gradient(45deg, #a6e11a 0%, #a53693 100%);
+  background: linear-gradient(45deg, #a6e11a 0%, #a53693 100%);
 }
 
 .c1-bg.bg-perc_90 {
-  background-color: rgba(139, 196, 53, 0.9);
+  background-color: rgba(165, 54, 147, 0.9);
 }
 
 .c1-bg.bg-perc_80,
 html.no-touch .apc.pod-windows .item a.info.c1-bg:hover::before {
-  background-color: rgba(139, 196, 53, 0.8);
+  background-color: rgba(165, 54, 147, 0.8);
 }
 
 .c1-bg.bg-perc_70 {
-  background-color: rgba(139, 196, 53, 0.7);
+  background-color: rgba(165, 54, 147, 0.7);
 }
 
 .c1-bg.bg-perc_60 {
-  background-color: rgba(139, 196, 53, 0.6);
+  background-color: rgba(165, 54, 147, 0.6);
 }
 
 .c1-bg.bg-perc_50,
 .apc.banner .item.overlay.c1-bg::before,
 .apc.pod-windows .item.overlay .info.c1-bg::before {
-  background-color: rgba(139, 196, 53, 0.5);
-  background: rgba(139, 196, 53, 0.5);
-  background: -moz-linear-gradient(45deg, rgba(166, 225, 26, 0.25) 0%, rgba(139, 196, 53, 0.75) 100%);
-  background: -webkit-linear-gradient(45deg, rgba(166, 225, 26, 0.25) 0%, rgba(139, 196, 53, 0.75) 100%);
-  background: linear-gradient(45deg, rgba(166, 225, 26, 0.25) 0%, rgba(139, 196, 53, 0.75) 100%);
+  background-color: rgba(165, 54, 147, 0.5);
+  background: rgba(165, 54, 147, 0.5);
+  background: -moz-linear-gradient(45deg, rgba(166, 225, 26, 0.25) 0%, rgba(165, 54, 147, 0.75) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(166, 225, 26, 0.25) 0%, rgba(165, 54, 147, 0.75) 100%);
+  background: linear-gradient(45deg, rgba(166, 225, 26, 0.25) 0%, rgba(165, 54, 147, 0.75) 100%);
 }
 
 .c1-bg.bg-perc_40 {
-  background-color: rgba(139, 196, 53, 0.4);
+  background-color: rgba(165, 54, 147, 0.4);
 }
 
 .c1-bg.bg-perc_30 {
-  background-color: rgba(139, 196, 53, 0.3);
+  background-color: rgba(165, 54, 147, 0.3);
 }
 
 .c1-bg.bg-perc_20 {
-  background-color: rgba(139, 196, 53, 0.2);
+  background-color: rgba(165, 54, 147, 0.2);
 }
 
 .c1-bg.bg-perc_10 {
-  background-color: rgba(139, 196, 53, 0.1);
+  background-color: rgba(165, 54, 147, 0.1);
 }
 
 .c2-bg {
@@ -4533,11 +4533,11 @@ body .c3-bg .base-text {
 a,
 a:focus,
 a:active {
-  color: #8bc435;
+  color: #a53693;
 }
 
 html.no-touch a:hover {
-  color: #6f9c2a;
+  color: #842580;
 }
 
 .c1-bg:not(.ignore-bg) a:not(.btn):not(.heading):not(.c1-text):not(.c2-text):not(.c3-text) {
@@ -4603,50 +4603,50 @@ html.no-touch .btn.c1-text:hover,
 .btn.c1-text:focus,
 .btn.c1-text:active,
 blockquote::before {
-  color: #8bc435;
+  color: #a53693;
 }
 
 html.no-touch a.c1-text:not(.btn):hover,
 a.c1-text:not(.btn):focus,
 a.c1-text:not(.btn):active,
 html.no-touch footer a:hover {
-  color: #6f9c2a;
+  color: #842580;
 }
 
 .c1-text.text-perc_90 {
-  color: rgba(139, 196, 53, 0.9);
+  color: rgba(165, 54, 147, 0.9);
 }
 
 .c1-text.text-perc_80 {
-  color: rgba(139, 196, 53, 0.8);
+  color: rgba(165, 54, 147, 0.8);
 }
 
 .c1-text.text-perc_70 {
-  color: rgba(139, 196, 53, 0.7);
+  color: rgba(165, 54, 147, 0.7);
 }
 
 .c1-text.text-perc_60 {
-  color: rgba(139, 196, 53, 0.6);
+  color: rgba(165, 54, 147, 0.6);
 }
 
 .c1-text.text-perc_50 {
-  color: rgba(139, 196, 53, 0.5);
+  color: rgba(165, 54, 147, 0.5);
 }
 
 .c1-text.text-perc_40 {
-  color: rgba(139, 196, 53, 0.4);
+  color: rgba(165, 54, 147, 0.4);
 }
 
 .c1-text.text-perc_30 {
-  color: rgba(139, 196, 53, 0.3);
+  color: rgba(165, 54, 147, 0.3);
 }
 
 .c1-text.text-perc_20 {
-  color: rgba(139, 196, 53, 0.2);
+  color: rgba(165, 54, 147, 0.2);
 }
 
 .c1-text.text-perc_10 {
-  color: rgba(139, 196, 53, 0.1);
+  color: rgba(165, 54, 147, 0.1);
 }
 
 .c2-text,
@@ -4905,43 +4905,43 @@ a.c6-text:not(.btn):active {
 -------------------------------------------------- 
 */
 .c1-borders {
-  border-color: #8bc435;
+  border-color: #a53693;
 }
 
 .c1-borders.borders-perc_90 {
-  border-color: rgba(139, 196, 53, 0.9);
+  border-color: rgba(165, 54, 147, 0.9);
 }
 
 .c1-borders.borders-perc_80 {
-  border-color: rgba(139, 196, 53, 0.8);
+  border-color: rgba(165, 54, 147, 0.8);
 }
 
 .c1-borders.borders-perc_70 {
-  border-color: rgba(139, 196, 53, 0.7);
+  border-color: rgba(165, 54, 147, 0.7);
 }
 
 .c1-borders.borders-perc_60 {
-  border-color: rgba(139, 196, 53, 0.6);
+  border-color: rgba(165, 54, 147, 0.6);
 }
 
 .c1-borders.borders-perc_50 {
-  border-color: rgba(139, 196, 53, 0.5);
+  border-color: rgba(165, 54, 147, 0.5);
 }
 
 .c1-borders.borders-perc_40 {
-  border-color: rgba(139, 196, 53, 0.4);
+  border-color: rgba(165, 54, 147, 0.4);
 }
 
 .c1-borders.borders-perc_30 {
-  border-color: rgba(139, 196, 53, 0.3);
+  border-color: rgba(165, 54, 147, 0.3);
 }
 
 .c1-borders.borders-perc_20 {
-  border-color: rgba(139, 196, 53, 0.2);
+  border-color: rgba(165, 54, 147, 0.2);
 }
 
 .c1-borders.borders-perc_10 {
-  border-color: rgba(139, 196, 53, 0.1);
+  border-color: rgba(165, 54, 147, 0.1);
 }
 
 .c2-borders {
@@ -5152,11 +5152,11 @@ a.c6-text:not(.btn):active {
 html.no-touch .btn.c1-bg:hover,
 .btn.c1-bg:active,
 .btn.c1-bg:focus {
-  background-color: #7db030;
+  background-color: #90308a;
 }
 
 html.no-touch .btn.c1-bg:hover::before {
-  border-color: #8bc435;
+  border-color: #a53693;
 }
 
 html.no-touch .btn.c2-bg:hover,
@@ -5665,7 +5665,7 @@ header a.expand {
   text-decoration: none;
   cursor: pointer;
   border-radius: 50%;
-  background-color: #8bc435;
+  background-color: #a53693;
 }
 
 header a.expand::before {
@@ -5807,7 +5807,7 @@ html.touch .navigation nav.main > ul > li > span a {
 
 html.no-touch .navigation nav.main ul li ul li span:not(.active) > a:hover,
 .navigation nav.main ul li ul li span:not(.active) > a:focus {
-  background-color: #7db030;
+  background-color: #90308a;
 }
 
 .navigation nav.main ul li span.active a {
@@ -5821,11 +5821,11 @@ html.no-touch .navigation nav.main ul li ul li span:not(.active) > a:hover,
 .navigation nav.main > ul > li > span.active,
 html.touch .navigation nav.main > ul > li.open,
 html.no-touch .navigation nav.main > ul > li:hover {
-  background-color: #8bc435;
+  background-color: #a53693;
 }
 
 .navigation nav.main > ul > li:focus-within {
-  background-color: #8bc435;
+  background-color: #a53693;
 }
 
 .navigation nav.main > ul > li > span.active > a,
@@ -5846,7 +5846,7 @@ html.no-touch .navigation nav.main > ul > li:hover > span > a {
 
 .navigation nav.main > ul > li.has-child ul {
   position: relative;
-  background-color: #8bc435;
+  background-color: #a53693;
 }
 
 .navigation nav.main > ul > li.has-child ul ul {
@@ -6357,13 +6357,13 @@ nav#pagination .pagination li a {
   border-style: solid;
   border-color: #e1e2e5;
   padding: 13px 20px;
-  color: #8bc435;
+  color: #a53693;
 }
 
 html.no-touch nav#pagination .pagination li:not(.active) a:hover {
   color: white;
-  border-color: #8bc435;
-  background-color: #8bc435;
+  border-color: #a53693;
+  background-color: #a53693;
 }
 
 nav#pagination .pagination li.prev,
@@ -6693,14 +6693,14 @@ nav.footer ul li div {
   border: 0 none;
   cursor: pointer;
   color: white;
-  background-color: rgba(139, 196, 53, 0);
+  background-color: rgba(165, 54, 147, 0);
   transform: translateY(-50%);
   border-radius: 50%;
 }
 
 .c1-bg .slick-prev,
 .c1-bg .slick-next {
-  background-color: rgba(139, 196, 53, 0);
+  background-color: rgba(165, 54, 147, 0);
 }
 
 .slick-prev {
@@ -6723,7 +6723,7 @@ nav.footer ul li div {
 
 html.no-touch .slick-prev:hover,
 html.no-touch .slick-next:hover {
-  background-color: #8bc435;
+  background-color: #a53693;
 }
 
 .slick-prev i,
@@ -6747,7 +6747,7 @@ html.no-touch .slick-next:hover {
   z-index: 0;
   border-width: 2px;
   border-style: solid;
-  border-color: rgba(139, 196, 53, 0);
+  border-color: rgba(165, 54, 147, 0);
   border-radius: 50%;
   opacity: 0;
 }
@@ -6756,7 +6756,7 @@ html.no-touch .slick-prev:hover::before,
 html.no-touch .slick-next:hover::before,
 html.touch .slick-prev:focus::before,
 html.touch .slick-next:focus::before {
-  border-color: #8bc435;
+  border-color: #a53693;
   animation: expandLink 1.25s normal forwards infinite ease-in-out;
 }
 
@@ -6820,7 +6820,7 @@ html.no-touch .c2-bg ul.slick-dots li:not(.slick-active) button:hover,
 .c2-bg ul.slick-dots li.slick-active button,
 html.no-touch .c3-bg ul.slick-dots li:not(.slick-active) button:hover,
 .c3-bg ul.slick-dots li.slick-active button {
-  background-color: #8bc435;
+  background-color: #a53693;
 }
 
 .apc.banner ul.slick-dots li:not(.slick-active) button,
@@ -7043,7 +7043,7 @@ html.no-touch nav.tabs .nav li:not(.active) a:hover::after {
 
 nav.tabs .nav li.active a::after {
   width: 100%;
-  background-color: #8bc435;
+  background-color: #a53693;
 }
 
 .c1-bg nav.tabs .nav li a,
@@ -7131,7 +7131,7 @@ html.no-touch .accordion .heading a:not(.collapsed):hover,
 
 .accordion .heading a:not(.collapsed)::after {
   width: 100%;
-  background-color: #8bc435;
+  background-color: #a53693;
 }
 
 .accordion .heading a.collapsed::after {
@@ -7151,7 +7151,7 @@ html.no-touch .accordion .heading a.collapsed:hover::after {
 }
 
 .accordion .heading a i {
-  color: #8bc435;
+  color: #a53693;
 }
 
 .accordion .heading a:not(.collapsed) i.ion-minus,
@@ -7411,7 +7411,7 @@ html.no-touch .spc.resources .item:hover {
   margin-bottom: 10px;
   border-width: 0 0 2px;
   border-style: solid;
-  border-color: #8bc435;
+  border-color: #a53693;
 }
 
 .spc.pricing-menu .head .heading {
@@ -9064,8 +9064,8 @@ label em.req {
 }
 
 .form-control:focus {
-  border-color: #8bc435;
-  box-shadow: 0 0 5px #8bc435;
+  border-color: #a53693;
+  box-shadow: 0 0 5px #a53693;
 }
 
 .form-group.uploadafile .form-control {
