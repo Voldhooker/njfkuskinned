@@ -80,6 +80,9 @@
     <Reference Include="ImageProcessor.Web, Version=4.8.7.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ImageProcessor.Web.4.8.7\lib\net45\ImageProcessor.Web.dll</HintPath>
     </Reference>
+    <Reference Include="InfoCaster.Umbraco.UrlTracker, Version=3.15.6603.27377, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UrlTracker.3.15.0\lib\net45\InfoCaster.Umbraco.UrlTracker.dll</HintPath>
+    </Reference>
     <Reference Include="interfaces, Version=1.0.6942.23070, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Core.7.13.0\lib\net45\interfaces.dll</HintPath>
     </Reference>
@@ -346,6 +349,8 @@
     <Content Include="App_Code\USNTemplate\USNViewTemplateHelper.cs" />
     <Content Include="App_Code\NjfkControllers\CustomMemberApiController.cs" />
     <Content Include="App_Code\NjfkModels\MemberPickerModel.cs" />
+    <Content Include="App_Code\Converters\MemberPickerConverter.cs" />
+    <Content Include="App_Code\NjfkModels\MemberPickerModelList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
