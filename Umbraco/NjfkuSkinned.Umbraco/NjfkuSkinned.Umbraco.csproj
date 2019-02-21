@@ -255,6 +255,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="400.aspx" />
+    <Content Include="500.aspx" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.htm" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
@@ -527,6 +529,7 @@
     <Content Include="Views\Partials\USNWebsiteHeadSection\USN_InternalStyles.cshtml" />
     <Content Include="Views\Partials\USNWebsiteHeadSection\USN_SEOPageHead.cshtml" />
     <Content Include="Views\Partials\USNWebsiteHeadSection\USN_WebsiteLogo.cshtml" />
+    <Content Include="Views\Custom404.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

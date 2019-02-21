@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "1aad31a559888ef7")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "af80ac63b7ce5600")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
@@ -13980,6 +13980,32 @@ namespace Umbraco.Web.PublishedContentModels
 		public object Tarsoftpicker
 		{
 			get { return this.GetPropertyValue("tarsoftpicker"); }
+		}
+	}
+
+	/// <summary>Custom404</summary>
+	[PublishedContentModel("custom404")]
+	public partial class Custom404 : UsnstandardPage
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "custom404";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Custom404(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Custom404, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
 	}
 
