@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "af80ac63b7ce5600")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "82623f3c6e30b572")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -14022,6 +14022,68 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Custom404, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+	}
+
+	/// <summary>Optimized video</summary>
+	[PublishedContentModel("optimizedVideo")]
+	public partial class OptimizedVideo : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "optimizedVideo";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public OptimizedVideo(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<OptimizedVideo, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Mp4
+		///</summary>
+		[ImplementPropertyType("mp4")]
+		public IPublishedContent Mp4
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("mp4"); }
+		}
+
+		///<summary>
+		/// Ogg
+		///</summary>
+		[ImplementPropertyType("ogg")]
+		public IPublishedContent Ogg
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("ogg"); }
+		}
+
+		///<summary>
+		/// Wait image
+		///</summary>
+		[ImplementPropertyType("waitImage")]
+		public IPublishedContent WaitImage
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("waitImage"); }
+		}
+
+		///<summary>
+		/// webm
+		///</summary>
+		[ImplementPropertyType("webm")]
+		public IPublishedContent Webm
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("webm"); }
 		}
 	}
 

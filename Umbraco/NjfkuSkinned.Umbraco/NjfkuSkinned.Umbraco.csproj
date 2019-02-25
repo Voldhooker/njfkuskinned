@@ -325,7 +325,10 @@
     <Content Include="config\Lang\ru-RU.user.xml" />
     <Content Include="config\Lang\sv-SE.user.xml" />
     <Content Include="config\Lang\zh-CN.user.xml" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.min.css" />
     <Content Include="css\ie.css" />
+    <Content Include="css\ionicons.min.css" />
     <Content Include="css\rteditor.css" />
     <Content Include="css\usn-global.css" />
     <Content Include="css\usn-global.min.css" />
@@ -333,6 +336,15 @@
     <Content Include="error.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\application.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-2.2.2.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr.min.js" />
+    <Content Include="Scripts\plugins.js" />
     <Content Include="usn\emailtemplates\contactform.htm" />
     <Content Include="usn\usercontrols\packageinstaller.ascx" />
     <Content Include="Web.config">
@@ -530,6 +542,7 @@
     <Content Include="Views\Partials\USNWebsiteHeadSection\USN_SEOPageHead.cshtml" />
     <Content Include="Views\Partials\USNWebsiteHeadSection\USN_WebsiteLogo.cshtml" />
     <Content Include="Views\Custom404.cshtml" />
+    <Content Include="Views\Partials\USNAdvancedPageComponents\Tarsoft_Optimized_Video.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -102,7 +102,7 @@
             break;
         case Usn_Sc_Pods_AN.ModelTypeAlias:
             <section class="content apc standard-components @(Model.GetPropertyValue<string>("customComponentClasses")) @settings.BackGroundStyle" @Html.Raw(backgroundImageStyle) id="@Html.Raw("pos_" + Model.Id)">
-            @Html.Partial("USNStandardPageComponents/USN_SC_Pods", (Usn_Sc_Pods_AN)Model, new ViewDataDictionary { { "pageType", "advanced" } })
+                @Html.Partial("USNStandardPageComponents/USN_SC_Pods", (Usn_Sc_Pods_AN)Model, new ViewDataDictionary { { "pageType", "advanced" } })
             </section>
             break;
         case Usn_Sc_ReusablePods_AN.ModelTypeAlias:
@@ -120,6 +120,11 @@
                 @Html.Partial("USNStandardPageComponents/USN_SC_Sitemap", (Usn_Sc_Sitemap_AN)Model, new ViewDataDictionary { { "pageType", "advanced" } })
             </section>
             break;
+        case OptimizedVideo.ModelTypeAlias:
+            
+            @Html.Partial("USNAdvancedPageComponents/Tarsoft_Optimized_Video", (OptimizedVideo)Model, new ViewDataDictionary { { "globalSettingsID", globalSettingsId } })
+            break;
+
     }
 }
 

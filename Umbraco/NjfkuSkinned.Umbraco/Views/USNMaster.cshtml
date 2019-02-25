@@ -1,5 +1,5 @@
 ﻿@inherits UmbracoViewPage<USN.USNModels.USNBaseViewModel>
-
+@using ClientDependency.Core.Mvc
 @{
     Layout = null;
 }
@@ -17,15 +17,24 @@
     @Html.Partial("USNWebsiteHeadSection/USN_SEOPageHead", Model)
 
     <!-- WEB FONT -->
-	<link href="//fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i,700,700i" rel="stylesheet" media="none" onload="this.media='all';">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i,700,700i" rel="stylesheet" media="none" onload="this.media='all';">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" media="none" onload="this.media='all';">
     <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" media="none" onload="this.media='all';">
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
+    @*<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">*@
+
     <!-- COMPILED STYLESHEETS -->
-    <link rel="stylesheet" href="~/css/usn-global.min.css" />
+    @*<link rel="stylesheet" href="~/css/usn-global.min.css" />*@
+
+    @{
+        Html.RequiresCss("~/css/bootstrap.min.css");
+        //Html.RequiresCss("~/css/font-awesome.min.css");
+        //Html.RequiresCss("~/css/ionicons.min.css");
+        Html.RequiresCss("~/css/usn-global.min.css");
+    }
+    @Html.RenderCssHere()
+
 
     <!-- INTERNAL STYLES -->
     @Html.Partial("USNWebsiteHeadSection/USN_InternalStyles", Model)
@@ -33,23 +42,35 @@
     <!--[if IE]>
     <link rel="stylesheet" href="~/css/ie.css">
     <![endif]-->
-
     <!-- SCRIPTS -->
-    <script src="//code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+    @*<script src="//code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>*@
+    @*<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>*@
+    @*<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>*@
+    @*<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>*@
+    @*<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>*@
 
-    <script src="~/scripts/plugins.js"></script>
-    <script src="~/scripts/application.js"></script>
-    <script src="~/scripts/jquery.unobtrusive-ajax.min.js"></script>
+    @*<script src="~/scripts/plugins.js"></script>*@
+    @*<script src="~/scripts/application.js"></script>*@
+    @*<script src="~/scripts/jquery.unobtrusive-ajax.min.js"></script>*@
+
+    @{ 
+        Html.RequiresJs("~/scripts/jquery-2.2.2.min.js");
+        Html.RequiresJs("~/scripts/modernizr.min.js");
+        Html.RequiresJs("~/scripts/bootstrap.min.js");
+        Html.RequiresJs("~/scripts/jquery.validate.min.js");
+        Html.RequiresJs("~/scripts/jquery.validate.unobtrusive.min.js");
+        Html.RequiresJs("~/scripts/plugins.js");
+        Html.RequiresJs("~/scripts/application.js");
+        Html.RequiresJs("~/jquery.unobtrusive-ajax.min.js");
+
+    }
+  
 
     <!-- ICONS -->
     @Html.Partial("USNWebsiteHeadSection/USN_Icons", Model)
 
     @RenderSection("Head", false)
-    
+
     @Html.Partial("USNMiscPageElements/USN_NotificationDurationVariable", Model)
 
     @Html.Partial("USNWebsiteHeadSection/USN_HeaderScripts", Model)
@@ -60,98 +81,98 @@
     <a class="skip-to-content sr-only" href="#content">Skip to the content</a>
     <!-- SITE -->
     <div id="site">
-        @if(!Model.Content.GetPropertyValue<bool>("hideWebsiteHeaderSection"))
+        @if (!Model.Content.GetPropertyValue<bool>("hideWebsiteHeaderSection"))
         {
-        <!-- HEADER -->
-        <header>
-            <div class="container">
-				<!-- ROW -->
-                <div class="row">
-                    <!-- LOGO -->
-                    @Html.Partial("USNWebsiteHeadSection/USN_WebsiteLogo", Model)
-                    <!--// LOGO -->
-                    <!-- EXPAND -->
-                    <a class="expand"><span>Menu</span></a>
-                    <!--// EXPAND -->
-                    <!-- NAVIGATION -->
-                    <div class="navigation">
+            <!-- HEADER -->
+            <header>
+                <div class="container">
+                    <!-- ROW -->
+                    <div class="row">
+                        <!-- LOGO -->
+                        @Html.Partial("USNWebsiteHeadSection/USN_WebsiteLogo", Model)
+                        <!--// LOGO -->
+                        <!-- EXPAND -->
+                        <a class="expand"><span>Menu</span></a>
+                        <!--// EXPAND -->
+                        <!-- NAVIGATION -->
+                        <div class="navigation">
 
-                        <!-- REVEAL -->
-                        <div class="reveal">
-	
-                            @Html.Partial("USNNavigation/USN_CTA", Model)
+                            <!-- REVEAL -->
+                            <div class="reveal">
 
-                            @Html.Partial("USNNavigation/USN_MainNavigation", Model)
-                            
-                            <div class="hidden-lg hidden-md">@Html.Partial("USNForms/USN_SearchForm", Model)</div>
+                                @Html.Partial("USNNavigation/USN_CTA", Model)
 
-                            @Html.Partial("USNNavigation/USN_SecondaryNavigation", Model)
+                                @Html.Partial("USNNavigation/USN_MainNavigation", Model)
 
+                                <div class="hidden-lg hidden-md">@Html.Partial("USNForms/USN_SearchForm", Model)</div>
+
+                                @Html.Partial("USNNavigation/USN_SecondaryNavigation", Model)
+
+                            </div>
+                            <!--// REVEAL -->
                         </div>
-                        <!--// REVEAL -->
+                        <!--// NAVIGATION -->
                     </div>
-                    <!--// NAVIGATION -->
+                    <!--// ROW -->
                 </div>
-				<!--// ROW -->
-            </div>
-        </header>
-        <!--// HEADER -->
+            </header>
+            <!--// HEADER -->
         }
-        
+
         <div id="content">
 
             @Html.Partial("USNAdvancedPageComponents/USN_TopComponents", Model)
 
             @RenderBody()
- 
+
             @Html.Partial("USNAdvancedPageComponents/USN_BottomComponents", Model)
-            
-        </div>    
+
+        </div>
 
         <!-- BREADCRUMB -->
         @Html.Partial("USNNavigation/USN_Breadcrumb", Model)
         <!--// BREADCRUMB -->
 
-        @if(!Model.Content.GetPropertyValue<bool>("hideWebsiteFooterSection"))
+        @if (!Model.Content.GetPropertyValue<bool>("hideWebsiteFooterSection"))
         {
-        <!-- FOOTER -->
-        <footer>
-            <div class="container">
-                <!-- ROW -->
-                <div class="row">
-                    <div class="col-md-4 col-xs-12">
-                        @Html.Partial("USNNavigation/USN_FooterQuickLinks", Model)
+            <!-- FOOTER -->
+            <footer>
+                <div class="container">
+                    <!-- ROW -->
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            @Html.Partial("USNNavigation/USN_FooterQuickLinks", Model)
+                        </div>
+                        <div class="col-md-4 col-md-offset-1 col-xs-12">
+                            @Html.Partial("USNNavigation/USN_SocialLinks", Model)
+                        </div>
+                        <div class="col-md-3 col-xs-12">
+                            <!-- COMPANY DETAILS -->
+                            @Html.Partial("USNMiscPageElements/USN_ContactInformation")
+                            <!--// COMPANY DETAILS -->
+                        </div>
                     </div>
-                    <div class="col-md-4 col-md-offset-1 col-xs-12">
-                        @Html.Partial("USNNavigation/USN_SocialLinks", Model)
+                    <!--// ROW -->
+                    <!-- ROW -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <nav class="footer">
+                                <ul>
+                                    <li class="copyright"><div>&copy; @DateTime.Now.ToString("yyyy")</div></li>
+                                    @Html.Partial("USNNavigation/USN_FooterNavigation", Model)
+                                    <li class="site-credit">
+                                        <div>Umbraco CMS theme from </div>
+                                        <a target="_blank" title="Link will open in a new window/tab" href="http://www.uskinned.net"><span>uSkinned</span></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                    <div class="col-md-3 col-xs-12">
-                        <!-- COMPANY DETAILS -->
-                        @Html.Partial("USNMiscPageElements/USN_ContactInformation")
-                        <!--// COMPANY DETAILS -->
-                    </div>
+                    <!--// ROW -->
                 </div>
-                <!--// ROW -->
-                <!-- ROW -->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <nav class="footer">
-                            <ul>
-                                <li class="copyright"><div>&copy; @DateTime.Now.ToString("yyyy")</div></li>
-                                @Html.Partial("USNNavigation/USN_FooterNavigation", Model)
-                                <li class="site-credit">
-                                    <div>Umbraco CMS theme from </div>
-                                    <a target="_blank" title="Link will open in a new window/tab" href="http://www.uskinned.net"><span>uSkinned</span></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <!--// ROW -->
-            </div>
-        </footer>
-        <!--// FOOTER -->
-        }	
+            </footer>
+            <!--// FOOTER -->
+        }
         <!-- BACK TO TOP -->
         <span id="top-link-block">
             <a class="btn c1-bg c5-text" href="#top" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
@@ -161,11 +182,11 @@
         <!--// BACK TO TOP -->
     </div>
     <!--// SITE -->
-    
+    @Html.RenderJsHere()
     @Html.Partial("USNMiscPageElements/USN_Notification", Model)
     @Html.Partial("USNBlog/USN_BlogDisqusCommentCountScript", Model)
     @RenderSection("FooterScripts", false)
     @Html.Partial("USNMiscPageElements/USN_BeforeClosingBodyScripts", Model)
-    
+
 </body>
 </html>
