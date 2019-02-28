@@ -5,7 +5,21 @@
 @using USN.USNTemplate;
 
 @using USNOptions = USNStarterKit.USNEnums.Options;
-
+@*http://jsfiddle.net/4dgaurav/d939e/5/*@
+<style>
+    .videoInsert {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        background-size: cover;
+        overflow: hidden;
+    }
+</style>
 @{
     if (Model.Banners != null)
     {
@@ -44,7 +58,7 @@
 
                     string colorOverlayClass = String.Empty;
 
-                    if(banner.AddColorOverlay)
+                    if (banner.AddColorOverlay)
                     {
                         colorOverlayClass = "overlay";
                     }
@@ -93,58 +107,66 @@
                     USNLink bannerLink = USNUrlHelper.GetLinkFromRelatedLinks(banner.BannerLink);
 
                     <div class="item @colorOverlayClass @bannerStyle @parallaxClass @settings.BackGroundStyle">
-	                    
+
                         @if (banner.BannerImage != null)
                         {
-						<!-- IMAGE -->
-						<div class="image lazyload" @Html.Raw(bgImageSmall) data-bg="@bgImage">
-							
-						</div>
-						<!--// IMAGE -->
+                            <!-- IMAGE -->
+                            <div class="image lazyload" @Html.Raw(bgImageSmall) data-bg="@bgImage">
+
+                            </div>
+                            <!--// IMAGE -->
                         }
 
                         @if (banner.Video != null)
                         {
-                        <!-- VIDEO -->
-                        <div class="video">
+                            <!-- VIDEO -->
+                            @*<div class="video">
 
-                            <video playsinline autoplay muted loop preload="none" width="640" height="360" class="video-player">
+                                    <video playsinline autoplay muted loop preload="none" width="640" height="360" class="video-player">
+                                        <source src="@banner.Video.Url" type="video/mp4">
+                                    </video>
+
+                                </div>*@
+
+
+                            <video class="videoInsert" playsinline autoplay muted loop preload="none">
                                 <source src="@banner.Video.Url" type="video/mp4">
+                                Your browser does not support the video tag.
                             </video>
 
-                        </div>
-                        <!--// VIDEO -->
+
+                            <!--// VIDEO -->
                         }
 
                         @if (banner.BannerHeading != null || banner.BannerText.HasValue() || bannerLink != null || banner.BannerSecondaryHeading.HasValue())
                         {
-							string textAlignment;
+                            string textAlignment;
 
                             switch (banner.BannerTextAlignment)
-		                    {
-		                        case USNOptions.TextAlignment_Left:
-		                            textAlignment = "col-md-8 col-xs-12 text-left";
-		                            break;
-		                        case USNOptions.TextAlignment_Center:
-		                            textAlignment = "col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 text-center";
-		                            break;
-		                        case USNOptions.TextAlignment_Right:
-		                            textAlignment = "col-md-8 col-sm-10 col-xs-12 pull-right text-right";
-		                            break;
-		                        default:
-		                            textAlignment = "col-md-8 col-xs-12 text-left";
-		                            break;
-		                    }
+                            {
+                                case USNOptions.TextAlignment_Left:
+                                    textAlignment = "col-md-8 col-xs-12 text-left";
+                                    break;
+                                case USNOptions.TextAlignment_Center:
+                                    textAlignment = "col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 text-center";
+                                    break;
+                                case USNOptions.TextAlignment_Right:
+                                    textAlignment = "col-md-8 col-sm-10 col-xs-12 pull-right text-right";
+                                    break;
+                                default:
+                                    textAlignment = "col-md-8 col-xs-12 text-left";
+                                    break;
+                            }
                             <div class="info">
                                 <div class="container">
                                     <!-- ROW -->
                                     <div class="row">
 
                                         <div class="table">
-				                            <div class="table-cell">
+                                            <div class="table-cell">
 
                                                 <div class="@textAlignment">
-                                                    @if(banner.BannerSecondaryHeading.HasValue())
+                                                    @if (banner.BannerSecondaryHeading.HasValue())
                                                     {
                                                         <p class="secondary-heading @settings.SecondaryHeadingStyle @animateClass" data-os-animation="fadeInUp" data-os-animation-delay="0.1s">@banner.BannerSecondaryHeading</p>
                                                     }
@@ -174,12 +196,12 @@
                         }
                         @if (banner.ScrollPrompt)
                         {
-                                <!-- SCROLL PROMPT -->
+                            <!-- SCROLL PROMPT -->
                             <div class="scroll-prompt text-center">
                                 <a class="c5-text hidden-lg"><i class="ion-ios-arrow-down"></i></a>
                                 <a class="c5-text hidden-md hidden-sm hidden-xs"><div class="mouse-scroll"></div><span>@umbraco.library.GetDictionaryItem("USN Banner Component Scroll Prompt")</span></a>
                             </div>
-                                <!--// SCROLL PROMPT -->
+                            <!--// SCROLL PROMPT -->
                         }
                     </div>
                 }

@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "82623f3c6e30b572")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "526c246b3dd389ce")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -14048,6 +14048,24 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<OptimizedVideo, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Button link
+		///</summary>
+		[ImplementPropertyType("buttonLink")]
+		public IPublishedContent ButtonLink
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("buttonLink"); }
+		}
+
+		///<summary>
+		/// Button text
+		///</summary>
+		[ImplementPropertyType("buttonText")]
+		public string ButtonText
+		{
+			get { return this.GetPropertyValue<string>("buttonText"); }
 		}
 
 		///<summary>

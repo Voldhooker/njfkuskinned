@@ -1,36 +1,69 @@
 ﻿@inherits UmbracoViewPage<OptimizedVideo>
-@*https://medium.com/@aswin_s/fullscreen-video-backgrounds-e8376ef93c72*@
+@*http://jsfiddle.net/4dgaurav/d939e/5/*@
 
 @using USNStarterKit.USNModels;
 @using USNStarterKit.USNHelpers;
 @using USN.USNTemplate;
 
 @using USNOptions = USNStarterKit.USNEnums.Options;
-
+<style>
+    .videoInsert {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        background-size: cover;
+        overflow: hidden;
+    }
+</style>
 @{
+    string slickAttributes = "data-slick='{{{0}{1}{2}}}'";
+    string autoRotateAttribute = String.Empty;
+    string dotsAttribute = "\"dots\": false ";
+    string arrowsAttribute = "\"arrows\": false ";
 
-    <section>
-        <h1>video goes here</h1>
-    </section>
-    @*<section class="content apc banner no-padding" id="pos_test">
-            <div class="slides">
-                Video goes here
+    slickAttributes = String.Format(slickAttributes, autoRotateAttribute, dotsAttribute, arrowsAttribute);
+    <section class="content apc banner no-padding" id="pos_@Model.Id">
+        <div class="slides" @Html.Raw(slickAttributes)>
+            @{
+                <div class="item">
+                    <video poster="@Model.WaitImage.Url" playsinline autoplay muted loop preload="none">
+                        <source src="@Model.Webm.Url" type="video/webm" />
+                        <source src="@Model.Mp4.Url" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            }
+        </div>
+        <div class="info">
+            <div class="container">
+                <!-- ROW -->
+                <div class="row">
 
-                @if (banner.Video != null)
-                {
-                    <!-- VIDEO -->
-                    <div class="video">
+                    <div class="table">
+                        <div class="table-cell">
 
-                        <video playsinline autoplay muted loop preload="none" width="640" height="360" class="video-player">
-                            <source src="@banner.Video.Url" type="video/mp4">
-                        </video>
+                            <div class="text-center">
 
+                                <p class="link os-animation fadeInUp animated" data-os-animation="fadeInUp" data-os-animation-delay="0.3s" style="animation-delay: 0.3s;">
+                                    <a class="btn c1-bg c5-text" href="/tandemsolo/" tabindex="0">FORTÆL MIG MERE!</a>
+                                </p>
+
+                            </div>
+                        </div>
                     </div>
-                    <!--// VIDEO -->
-                }
-
+                </div>
+                <!--// ROW -->
             </div>
-        </section>
-    *@
+        </div>
+        }
+    </section>
+
+
+
 }
 

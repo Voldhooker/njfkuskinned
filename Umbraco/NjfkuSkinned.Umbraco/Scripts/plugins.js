@@ -1210,24 +1210,24 @@ jQuery(function() { // runs after DOM has loaded
 
 function resizeToCover() {
 
-    // set the video viewport to the window size
-    jQuery('.apc.banner .video .video-player').width(jQuery(window).width());
-    jQuery('.apc.banner .video .video-player').height(jQuery(window).height());
+    //// set the video viewport to the window size
+    //jQuery('.apc.banner .video .video-player').width(jQuery(window).width());
+    //jQuery('.apc.banner .video .video-player').height(jQuery(window).height());
 
-    // use largest scale factor of horizontal/vertical
-    var scale_h = jQuery(window).width() / vid_w_orig;
-    var scale_v = jQuery(window).height() / vid_h_orig;
-    var scale = scale_h > scale_v ? scale_h : scale_v;
+    //// use largest scale factor of horizontal/vertical
+    //var scale_h = jQuery(window).width() / vid_w_orig;
+    //var scale_v = jQuery(window).height() / vid_h_orig;
+    //var scale = scale_h > scale_v ? scale_h : scale_v;
 
-    // don't allow scaled width < minimum video width
-    if (scale * vid_w_orig < min_w) { scale = min_w / vid_w_orig; };
+    //// don't allow scaled width < minimum video width
+    //if (scale * vid_w_orig < min_w) { scale = min_w / vid_w_orig; };
 
-    // now scale the video
-    jQuery('video').width(scale * vid_w_orig);
-    jQuery('video').height(scale * vid_h_orig);
-    // and center it by scrolling the video viewport
-    jQuery('.apc.banner .video .video-player').scrollLeft((jQuery('video').width() - jQuery(window).width()) / 2);
-    jQuery('.apc.banner .video .video-player').scrollTop((jQuery('video').height() - jQuery(window).height()) / 2);
+    //// now scale the video
+    //jQuery('video').width(scale * vid_w_orig);
+    //jQuery('video').height(scale * vid_h_orig);
+    //// and center it by scrolling the video viewport
+    //jQuery('.apc.banner .video .video-player').scrollLeft((jQuery('video').width() - jQuery(window).width()) / 2);
+    //jQuery('.apc.banner .video .video-player').scrollTop((jQuery('video').height() - jQuery(window).height()) / 2);
 };
 
 
