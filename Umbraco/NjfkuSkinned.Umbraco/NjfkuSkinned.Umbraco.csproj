@@ -336,6 +336,11 @@
     <Content Include="error.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\clear.gif" />
+    <Content Include="images\face.png" />
+    <Content Include="images\icons\loading-on-black.gif" />
+    <Content Include="images\icons\loading-on-white.gif" />
+    <Content Include="images\icons\social.png" />
     <Content Include="Scripts\application.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -412,6 +417,8 @@
     <Content Include="App_Plugins\USN.ShowHideTabs\package.manifest" />
     <Content Include="App_Plugins\USN.TrueFalse\package.manifest" />
     <Content Include="App_Plugins\USN.TwitterUsername\package.manifest" />
+    <Content Include="App_Data\packages\created\createdPackages.config" />
+    <Content Include="App_Data\packages\installed\installedPackages.config" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -544,6 +551,8 @@
     <Content Include="Views\Partials\USNWebsiteHeadSection\USN_WebsiteLogo.cshtml" />
     <Content Include="Views\Custom404.cshtml" />
     <Content Include="Views\Partials\USNAdvancedPageComponents\Tarsoft_Optimized_Video.cshtml" />
+    <Content Include="Views\CalendarFolder.cshtml" />
+    <Content Include="Views\test.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
