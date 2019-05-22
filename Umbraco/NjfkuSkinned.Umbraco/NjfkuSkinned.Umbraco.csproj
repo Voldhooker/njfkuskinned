@@ -532,6 +532,7 @@
     <Content Include="Views\Partials\USNWebsiteHeadSection\USN_SEOPageHead.cshtml" />
     <Content Include="Views\Partials\USNWebsiteHeadSection\USN_WebsiteLogo.cshtml" />
     <Content Include="Views\Custom404.cshtml" />
+    <Content Include="Views\Partials\NJFK\planestatus_textfile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
